@@ -1,0 +1,75 @@
+{
+	"name": "@shambay/cached-http-resolver",
+	"version": "1.0.0",
+	"description": "HTTP client with caching, deduplication, retries and pluggable cache stores (memory, Redis)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sham-bay/ts-cached-http-resolver.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sham-bay/ts-cached-http-resolver/issues"
+	},
+	"homepage": "https://github.com/sham-bay/ts-cached-http-resolver",
+	"license": "Apache-2.0",
+	"author": "Sham Bay <sham.bay@use_social_to_contact.me>",
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"sideEffects": false,
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"prepublishOnly": "pnpm run build",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:coverage": "vitest run --coverage"
+	},
+	"peerDependencies": {
+		"ioredis": "^6.0.0"
+	},
+	"peerDependenciesMeta": {
+		"ioredis": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^22",
+		"@vitest/coverage-v8": "^4.1.11",
+		"eslint": "^10.4.1",
+		"eslint-config-prettier": "^10.1.8",
+		"prettier": "^3.8.3",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.60.1",
+		"vitest": "^4.1.11"
+	},
+	"keywords": [
+		"http",
+		"fetch",
+		"cache",
+		"retry",
+		"dedupe",
+		"redis",
+		"memory",
+		"request",
+		"resolver"
+	],
+	"packageManager": "pnpm@11.21.0"
+}

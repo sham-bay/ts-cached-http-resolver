@@ -1,0 +1,75 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ====================
+# Build outputs
+# ====================
+
+dist/
+build/
+*.tsbuildinfo
+
+# ====================
+# Environment & secrets
+# ====================
+
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ====================
+# IDE / editor files
+# ====================
+
+.vs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# ====================
+# OS garbage
+# ====================
+
+Thumbs.db
+Desktop.ini
+
+# ====================
+# Test coverage
+# ====================
+
+coverage/
+.nyc_output/
+
+# ====================
+# Logs
+# ====================
+
+logs/
+*.log
+
+# ====================
+# Temporary / cache
+# ====================
+
+.tmp/
+.cache/
+.eslintcache
+.prettiercache
+
+# ====================
+# Package manager locks (optional – keep or exclude?)
+# --------------------
+# 💡 pnpm-lock.yaml should be committed for reproducibility.
+#    If you still want to ignore it, uncomment the line below.
+# ====================
+
+# pnpm-lock.yaml
