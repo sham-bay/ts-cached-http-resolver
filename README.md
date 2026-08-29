@@ -1,6 +1,6 @@
 # TypeScript Cached Http Resolver
 
-[![npm version](https://badge.fury.io/js/%40shambay%2Fcached-http-resolver.svg)](https://badge.fury.io/js/%40shambay%2Fcached-http-resolver)
+![NPM Version](https://img.shields.io/npm/v/%2540shambay%252Fcached-http-resolver?style=for-the-badge&logo=npm&logoColor=red)
 [![Publish to npm](https://github.com/sham-bay/ts-cached-http-resolver/actions/workflows/publish-to-npm.yml/badge.svg)](https://github.com/sham-bay/ts-cached-http-resolver/actions/workflows/publish-to-npm.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
