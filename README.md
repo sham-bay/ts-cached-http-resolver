@@ -1,7 +1,7 @@
 # TypeScript Cached Http Resolver
 
 [![npm version](https://badge.fury.io/js/%40shambay%2Fcached-http-resolver.svg)](https://badge.fury.io/js/%40shambay%2Fcached-http-resolver)
-[![CI](https://github.com/sham-bay/ts-cached-http-resolver/.github/workflows/publish-to-npm.yml/badge.svg)](https://github.com/sham-bay/ts-cached-http-resolver/.github/workflows/publish-to-npm.yml)
+[![Publish to npm](https://github.com/sham-bay/ts-cached-http-resolver/actions/workflows/publish-to-npm.yml/badge.svg)](https://github.com/sham-bay/ts-cached-http-resolver/actions/workflows/publish-to-npm.yml)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 HTTP client with caching, deduplication, pre‑emptive refresh and retries.
