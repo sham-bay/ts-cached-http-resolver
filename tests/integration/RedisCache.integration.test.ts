@@ -1,23 +1,21 @@
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import Redis from 'ioredis';
-import { RedisCache } from '../../src/cache/RedisCache';
-import type { CacheItem } from '../../src/types';
+import { RedisCache } from '../../src/cache/RedisCache.js';
+import type { CacheItem } from '../../src/types/CacheItem.js';
 
 // Redis configuration (can be set via environment variables)
 const REDIS_HOST = process.env.REDIS_HOST || 'localhost';
 const REDIS_PORT = parseInt(process.env.REDIS_PORT || '6379', 10);
 
 describe('RedisCache (integration with real Redis)', () => {
-	let redisClient: Redis;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let redisClient: any = null; // using 'any' to avoid type issues with ioredis in ESM
 	let cache: RedisCache;
 
 	beforeAll(async () => {
 		// Create client and check connectivity
-		redisClient = new Redis({ host: REDIS_HOST, port: REDIS_PORT });
-		cache = new RedisCache({
-			redis: redisClient,
-			keyPrefix: 'test:'
-		});
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		redisClient = new (Redis as any)({ host: REDIS_HOST, port: REDIS_PORT });
 
 		// Verify that Redis is available
 		try {
@@ -31,6 +29,11 @@ describe('RedisCache (integration with real Redis)', () => {
 				cause: 'Redis connection failed '
 			});
 		}
+
+		cache = new RedisCache({
+			redis: redisClient,
+			keyPrefix: 'test:'
+		});
 	});
 
 	afterAll(async () => {
@@ -130,7 +133,7 @@ describe('RedisCache (integration with real Redis)', () => {
 	describe('prefix handling', () => {
 		it('should isolate keys with different prefixes', async () => {
 			const otherCache = new RedisCache({
-				redis: redisClient,
+				redis: { host: REDIS_HOST, port: REDIS_PORT },
 				keyPrefix: 'other:'
 			});
 

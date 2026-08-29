@@ -1,5 +1,5 @@
-import type { CacheStore } from './CacheStore';
-import type { CacheItem } from '../types';
+import type { CacheStore } from './CacheStore.js';
+import type { CacheItem } from '../types/CacheItem.js';
 
 /**
  * In‑memory cache store using a JavaScript `Map`.

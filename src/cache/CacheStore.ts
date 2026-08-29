@@ -1,4 +1,4 @@
-import type { CacheItem } from '../types';
+import type { CacheItem } from '../types/CacheItem.js';
 
 /**
  * Generic interface for a cache storage backend.

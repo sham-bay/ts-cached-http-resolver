@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { MemoryCache } from '../../src/cache/MemoryCache';
-import type { CacheItem } from '../../src/types';
+import { MemoryCache } from '../../src/cache/MemoryCache.js';
+import type { CacheItem } from '../../src/types/CacheItem.js';
 
 describe('MemoryCache', () => {
 	let cache: MemoryCache;

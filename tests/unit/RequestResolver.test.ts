@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { RequestResolver } from '../../src/core/RequestResolver';
-import { MemoryCache } from '../../src/cache/MemoryCache';
+import { RequestResolver } from '../../src/core/RequestResolver.js';
+import { MemoryCache } from '../../src/cache/MemoryCache.js';
 
 describe('RequestResolver - TTL and expiration', () => {
 	let cache: MemoryCache;

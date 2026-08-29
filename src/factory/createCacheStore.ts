@@ -1,6 +1,6 @@
-import { MemoryCache } from '../cache/MemoryCache';
-import { RedisCache, type RedisCacheOptions } from '../cache/RedisCache';
-import type { CacheStore } from '../cache/CacheStore';
+import { MemoryCache } from '../cache/MemoryCache.js';
+import { RedisCache, type RedisCacheOptions } from '../cache/RedisCache.js';
+import type { CacheStore } from '../cache/CacheStore.js';
 
 /**
  * Supported cache store types.

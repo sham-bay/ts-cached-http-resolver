@@ -1,7 +1,7 @@
-import type { CacheItem, RequestConfig, RetryOptions } from '../types';
-import type { CacheStore } from '../cache/CacheStore';
-import { checkResponse } from '../utils/checkResponse';
-import { retryWithExponentialBackoff } from '../utils/retryWithExponentialBackoff';
+import type { CacheItem, RequestConfig, RetryOptions } from '../types/index.js';
+import type { CacheStore } from '../cache/CacheStore.js';
+import { checkResponse } from '../utils/checkResponse.js';
+import { retryWithExponentialBackoff } from '../utils/retryWithExponentialBackoff.js';
 
 /**
  * Universal HTTP client with caching, deduplication, pre‑emptive refresh and retries.

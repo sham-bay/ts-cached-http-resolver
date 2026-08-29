@@ -1,4 +1,4 @@
-import type { RetryOptions } from './RetryOptions';
+import type { RetryOptions } from './RetryOptions.js';
 
 /**
  * Configuration for a single request.
